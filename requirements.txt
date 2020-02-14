@@ -1,0 +1,4 @@
+vk-api.py
+aiohhttp
+websockets
+chardet
