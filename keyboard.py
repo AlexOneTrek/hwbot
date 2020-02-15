@@ -51,5 +51,5 @@ admin_keyboard = {
     ]
 }
 
-admin_keyboard = json.dumps(keyboard, ensure_ascii=False).encode('utf-8')
-admin_keyboard = str(keyboard.decode('utf-8'))
+admin_keyboard = json.dumps(admin_keyboard, ensure_ascii=False).encode('utf-8')
+admin_keyboard = str(admin_keyboard.decode('utf-8'))

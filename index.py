@@ -1,4 +1,5 @@
-from keyboard import keyboard, admin_keyboard
+from keyboard import keyboard
+from keyboard import admin_keyboard
 from connect import *
 
 print("START")
@@ -47,7 +48,7 @@ for event in longpoll.listen():
                     'peer_id': event.object.from_id,
                     'message': 'Я могу: \n 1) отправить вам ДЗ \n 2) отправить вам мем',
                     'random_id': 0,
-                    'keyboard': admin_keyboard
+                    'keyboard': keyboard
                 })
 
             elif response == "отправить домашнее задание":
@@ -64,7 +65,7 @@ for event in longpoll.listen():
                         'peer_id': event.object.from_id,
                         'message': 'Админка может: \n 1) Добавить ДЗ \n 2) Добавить мем',
                         'random_id': 0,
-                        'keyboard': keyboard
+                        'keyboard': admin_keyboard
                     })
 
             else:
