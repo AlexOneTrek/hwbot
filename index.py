@@ -1,6 +1,7 @@
 from keyboard import keyboard
 from keyboard import admin_keyboard
 from connect import *
+from db import *
 
 print("START")
 
@@ -43,7 +44,7 @@ for event in longpoll.listen():
                     print(payloads)
 
         elif event.object.peer_id == event.object.from_id:
-            if response == "тест":
+            if response == "начать":
                 vk_con.method('messages.send', {
                     'peer_id': event.object.from_id,
                     'message': 'Я могу: \n 1) отправить вам ДЗ \n 2) отправить вам мем',
